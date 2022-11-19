@@ -1,6 +1,6 @@
 title: MISW4406
 description: Curso MISO
-url: "https://misw4406.github.io/"
+url: "https://misw4406.github.io"
 theme: just-the-docs
 permalink: pretty
 
@@ -28,7 +28,7 @@ exclude:
    - README.md
 
 # Set a path/url to a logo that will be displayed instead of the title
-#logo: "/assets/images/just-the-docs.png"
+#logo: "/assets/img/just-the-docs.png"
 
 # Enable or disable the site search
 # Supports true (default) or false
@@ -63,7 +63,7 @@ search:
 mermaid:
   # Version of mermaid library
   # Pick an available version from https://cdn.jsdelivr.net/npm/mermaid/
-  version: "9.1.6"
+  version: "9.2.2"
   # Put any additional configuration, such as setting the theme, in _includes/mermaid_config.js
   # See also docs/ui-components/code
 
@@ -94,20 +94,17 @@ nav_external_links:
 back_to_top: true
 back_to_top_text: "Volver al principio"
 
-footer_content: "Copyright &copy; 2022 Juan Urrego"
+footer_content: "Copyright &copy; 2022-2023 Juan Urrego"
 
 # Footer last edited timestamp
 last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
 last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https://ruby-doc.org/stdlib-2.7.0/libdoc/time/rdoc/Time.html
-
-
 
 # Footer "Edit this page on GitHub" link text
 gh_edit_link: true # show or hide edit this page link
 gh_edit_link_text: "Edite esta página en Github"
 gh_edit_repository: "https://github.com/MISW4406/misw4406.github.io" # the github URL for your repo
 gh_edit_branch: "main" # the branch that your docs is served from
-# gh_edit_source: docs # the source that your files originate from
 gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately
 
 # Color scheme currently only supports "dark", "light"/nil (default), or a custom scheme that you define
@@ -118,25 +115,17 @@ callouts:
   highlight:
     color: yellow
   important:
-    title: Important
+    title: Importante
     color: blue
-  new:
-    title: New
+  task:
+    title: Tarea
     color: green
   note:
-    title: Note
+    title: Nota
     color: purple
   warning:
-    title: Warning
+    title: Advertencia
     color: red
-
-# Google Analytics Tracking (optional)
-# e.g, UA-1234567-89
-ga_tracking: UA-2709176-10
-ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true/nil by default)
-
-plugins:
-  - jekyll-seo-tag
 
 kramdown:
   syntax_highlighter_opts:
@@ -150,5 +139,3 @@ compress_html:
   startings: []
   blanklines: false
   profile: false
-  # ignore:
-  #   envs: all
