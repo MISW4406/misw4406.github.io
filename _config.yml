@@ -1,4 +1,4 @@
-title: MISW4406
+title: Diseño y construcción de soluciones no monolíticas
 description: Curso MISO
 url: "https://misw4406.github.io"
 theme: just-the-docs
@@ -28,7 +28,7 @@ exclude:
    - README.md
 
 # Set a path/url to a logo that will be displayed instead of the title
-#logo: "/assets/img/just-the-docs.png"
+logo: "/assets/img/logo.svg"
 
 # Enable or disable the site search
 # Supports true (default) or false
