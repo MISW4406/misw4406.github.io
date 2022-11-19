@@ -1,9 +1,5 @@
-# frozen_string_literal: true
-
 source "https://rubygems.org"
 
-# gem "rails"
-
-gem "just-the-docs"
+gem "just-the-docs", "0.4.0.rc3"
 
 gem "jekyll", "~> 4.2"
