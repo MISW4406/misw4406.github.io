@@ -151,7 +151,7 @@ Siga los pasos sugeridos en el video tutorial del curso, si aún tiene dudas pue
 ##### 5. Completar
 
 {: .task}
-Use toda la información que tiene acerca de AeroAlpes y trate de completar el diccionario de datos para el contexto de **reservas**.
+Use toda la información que tiene acerca de AeroAlpes y diseñe un lenguaje ubicuo usando Event Storm como medio. Enfóquese únicamente en el contexto de **reservas**.
 
 #### Nivel de diseño
 
