@@ -110,13 +110,11 @@ gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into t
 # Color scheme currently only supports "dark", "light"/nil (default), or a custom scheme that you define
 color_scheme: nil
 
-callouts_level: quiet # or loud
+callouts_level: quiet
 callouts:
-  highlight:
-    color: yellow
   important:
+    color: yellow
     title: Importante
-    color: blue
   task:
     title: Tarea
     color: green
