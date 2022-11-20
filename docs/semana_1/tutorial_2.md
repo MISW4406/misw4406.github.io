@@ -141,4 +141,4 @@ Una vez entendido el modelo, entienda la sintáxis y reglas semánticas del DSL 
 ##### 4. Completar
 
 {: .task}
-Use toda la información que tiene acerca de AeroAlpes y diseñe un Mapa de contexto usando ContextMapper. Enfóquese únicamente en el contexto de **reservas** y **clientes**.
+> Use toda la información que tiene acerca de AeroAlpes y diseñe un Mapa de contexto usando ContextMapper. Enfóquese únicamente en el contexto de **reservas** y **clientes**.
