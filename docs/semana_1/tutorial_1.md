@@ -161,7 +161,7 @@ Este tutorial no va a entrar en detalle acerca de este formato, pero puede ver u
 
 #### Material adicional
 
-1. [Muestra del libro](file:///Users/juan.urrego/Downloads/introducing_eventstorming-sample.pdf){:target="_blank"} de Event Storming de Alberto Brandolini.
+1. [Muestra del libro](https://leanpub.com/introducing_eventstorming/read_sample){:target="_blank"} de Event Storming de Alberto Brandolini.
 2. [Formato Big Picture](https://medium.com/@chatuev/big-picture-event-storming-7a1fe18ffabb){:target="_blank"} 
 3. [Formato Nivel de diseño](https://philippe.bourgau.net/detailed-agenda-for-a-ddd-design-level-event-storming-part-1){:target="_blank"} 
 
