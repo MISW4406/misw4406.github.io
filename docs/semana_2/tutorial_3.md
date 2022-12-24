@@ -25,7 +25,7 @@ A lo largo de esta semana exploramos diferentes conceptos, principios y patrones
 
 ## Preparación
 
-Haga un fork del template de AeroAlpes en su repositorio de preferencia. Si necesita ayuda en como realizar este paso, use alguno de los siguientes links:
+Haga un fork del template de [AeroAlpes](https://github.com/MISW4406/tutorial-3-arquitectura-hexagonal){:target="_blank"} en su repositorio de preferencia. Si necesita ayuda en como realizar este paso, use alguno de los siguientes links:
 
 1. [Fork Github a Github](https://docs.github.com/en/get-started/quickstart/fork-a-repo){:target="_blank"}
 2. [Fork de Github a Gitlab](https://stackoverflow.com/questions/50973048/forking-git-repository-from-github-to-gitlab){:target="_blank"}
