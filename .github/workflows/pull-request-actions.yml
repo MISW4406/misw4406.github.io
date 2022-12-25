@@ -1,5 +1,5 @@
 
-name: Pull Request AeroAlpes
+name: Pull Request Wiki
 'on':
   pull_request:
     branches:
