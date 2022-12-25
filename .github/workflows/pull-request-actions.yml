@@ -1,0 +1,24 @@
+
+name: Pull Request AeroAlpes
+'on':
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  # Build job
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v2
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1 # v1.115.3
+        with:
+          ruby-version: '3.0' # Not needed with a .ruby-version file
+      - run: bundle install;bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+        env:
+          JEKYLL_ENV: test
