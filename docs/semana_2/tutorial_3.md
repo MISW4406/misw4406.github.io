@@ -33,6 +33,8 @@ Haga un fork del template de [AeroAlpes](https://github.com/MISW4406/tutorial-3-
 
 Si esta usando Gitpod puede ejecutar su código de forma inmediata. De lo contrario, instale las dependencias en su máquina o ambiente de desarollo, usando el archivo de `requirements.txt`. La versión de Python que se usa es 3.10 pero el requerimiento mínimo es de 3.7. Para crear ambiente de desarollo virtuales en su máquina local, es sugerible usar [Conda](https://docs.conda.io/en/latest/){:target="_blank"}, en los recursos adicionales del sitio puede encontrar un [documento](/docs/recursos_adicionales/conda){:target="_blank"} sobre su configuración.
 
+**Nota: Gitpod puede tardar un poco en instalar las dependencias la primera vez que crea el workspace. Usted puede observar el progreso de la instalación por medio de la vista de terminal en la parte inferior del IDE. Así mismo, en la esquina inferior derecha puede ver los pasos en ejecución con su correspondiente output.**
+
 ## Manos a la obra
 
 Comience por entender la estructura del proyecto. Este ya contiene un README con una breve explicación de la arquitectura de alto nivel. Revisa la implementación de los diferentes conceptos en el módulo de `vuelos` y use esta como ejemplo para los siguientes pasos. En este tutorial no enfocaremos en en **extender el módulo cliente**.
