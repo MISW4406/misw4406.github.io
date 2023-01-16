@@ -12,7 +12,7 @@ nav_order: 1
 
 Hasta ahora en la semana, hemos aprendido acerca de los diferentes tipos de patrones en sistemas distribuidos. Conocimos que la primera categoría es la llamada **Single-Node** y que de ella podemos encontrar los patrones: Sidecar, adaptadores y embajadores. En este tutorial, entraremos aún más en los detalles de implementación de dichos patrones, enfocándonos especialmente en los adaptadores. En la web usted podrá encontrar varios ejemplos "Hello World" acerca de los Sidecars, para el uso de [logging y monitoreo](https://sensu.io/resources/whitepaper/whitepaper-monitoring-kubernetes-the-sidecar-pattern){:target="_blank"}. Sin embargo, estos patrones nos pueden ser de inmensa ayuda para desmantelar nuestro monolito. 
 
-Por tal motivo, durante este tutorial también conoceremos acerca de [gRPC](https://grpc.io/){:target="_blank"} y [Protocolos de Buffering](https://developers.google.com/protocol-buffers/docs/style?hl=es-419){:target="_blank"} (Protobuf). Veremos en AeroAlpes un ejemplo en donde deseamos crear un adaptador gRPC para que servicios externos se comuniquen con AeroAlpes sin llegar a tocar el código de AeroAlpes.
+Por tal motivo, durante este tutorial también conoceremos acerca de [gRPC](https://grpc.io/){:target="_blank"} y [Protocolos de Buffering](https://developers.google.com/protocol-buffers/docs/proto3?hl=es-419){:target="_blank"} (Protobuf). Veremos en AeroAlpes un ejemplo en donde deseamos crear un adaptador gRPC para que servicios externos se comuniquen con AeroAlpes sin llegar a tocar el código de AeroAlpes.
 
 {: .note }
 > Antes de comenzar con el desarrollo, comience viendo el video tutorial donde se explican y elaboran algunos de los métodos a tratar aquí.
