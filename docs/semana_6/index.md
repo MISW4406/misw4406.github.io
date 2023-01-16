@@ -7,5 +7,5 @@ has_children: true
 
 # Semana 6
 
-Sistemas reactivos: Modelo de actores, fundamentos de la programación reactiva y conceptos avanzados.
+Microservicios: Transacciones, presentación y despliegue.
 {: .fs-6 .fw-300 }

@@ -7,5 +7,5 @@ has_children: true
 
 # Semana 3
 
-Microservicios basados en eventos: Sistemas distribuidos, fundamentos e integración con sistemas legado
+Microservicios: Diseño de la lógica de negocio y arquitectura orientada a eventos
 {: .fs-6 .fw-300 }
