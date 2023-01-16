@@ -1,16 +1,16 @@
 ---
-title: Tutorial 4 - Sidecar, Adaptadores y Embajadores
+title: Tutorial 4 - Sidecar, adaptadores y embajadores
 layout: default
 parent: Semana 3
 nav_order: 1
 ---
 
-# Tutorial 4 - Sidecar, Adaptadores y Embajadores
+# Tutorial 4 - Sidecar, adaptadores y embajadores
 
 ## Introducción
 {: .no_toc }
 
-Hasta ahora en la semana, hemos aprendido acerca de los diferentes tipos de patrones en sistemas distribuidos. Conocimos que la primera categoría es la llamada **Single-Node** y que de ella podemos encontrar los patrones: Sidecar, adaptador y embajador. En este tutorial, entraremos aún más en los detalles de implementación de dichos patrones, enfocándonos especialmente en los [adaptadores](https://learning.oreilly.com/library/view/kubernetes-patterns-2nd/9781098131678/ch08.html){:target="_blank"}. En la web usted podrá encontrar [varios ejemplos](https://www.weave.works/blog/kubernetes-patterns-the-adapter-pattern){:target="_blank"} *"Hello World"* acerca de los Sidecars, para el uso de [logging y monitoreo](https://sensu.io/resources/whitepaper/whitepaper-monitoring-kubernetes-the-sidecar-pattern){:target="_blank"}. Sin embargo, aunque dichos ejemplos no sean relevantes, estos patrones nos pueden ser de aún mayor utilidad para desmantelar nuestro monolito. 
+Hasta ahora en la semana, hemos aprendido acerca de los diferentes tipos de patrones en sistemas distribuidos. Conocimos que la primera categoría es la llamada **Single-Node** y que de ella podemos encontrar los patrones: Sidecar, adaptador y embajador. En este tutorial, entraremos aún más en los detalles de implementación de dichos patrones, enfocándonos especialmente en los [adaptadores](https://learning.oreilly.com/library/view/kubernetes-patterns-2nd/9781098131678/ch08.html){:target="_blank"}. En la web usted podrá encontrar [varios ejemplos](https://www.weave.works/blog/kubernetes-patterns-the-adapter-pattern){:target="_blank"} *"Hello World"* acerca de los Sidecars, para el uso de [logging y monitoreo](https://sensu.io/resources/whitepaper/whitepaper-monitoring-kubernetes-the-sidecar-pattern){:target="_blank"}. Sin embargo, aunque dichos ejemplos siguen siendo relevantes, estos patrones pueden ser de aún mayor utilidad para desmantelar nuestro monolito. 
 
 Por tal motivo, durante este tutorial también conoceremos acerca de [gRPC](https://grpc.io/){:target="_blank"} y [Protocol Buffers](https://developers.google.com/protocol-buffers/docs/proto3?hl=es-419){:target="_blank"} (Protobuf). Veremos en AeroAlpes un ejemplo en donde deseamos crear un adaptador gRPC para que servicios externos se comuniquen con AeroAlpes, sin que sea necesario hacer un refactoring en el código de AeroAlpes.
 
