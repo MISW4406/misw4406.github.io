@@ -7,5 +7,5 @@ has_children: true
 
 # Semana 5
 
-Microservicios: Comunicación con terceros y despliegue de servicios.
+Microservicios: Integración con sistemas legado y almacenamiento.
 {: .fs-6 .fw-300 }
