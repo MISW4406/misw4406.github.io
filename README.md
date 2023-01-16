@@ -11,7 +11,7 @@ Si desea correr el servidor localmente ejecute el siguiente comando para instala
 bundle install
 ```
 
-Una vez con todas las dependencias puee ejectuar el servidor. Si usa el parámetro `--livereload` le va a permitir ir haciendo cambios y verlos en su browser (sin necesidad de tener que parar y correr el servidor con cada nuevo cambio).
+Una vez con todas las dependencias puede ejectuar el servidor. Si usa el parámetro `--livereload` le va a permitir ir haciendo cambios y verlos en su browser (sin necesidad de tener que parar y correr el servidor con cada nuevo cambio).
 
 ```bash
 bundle exec jekyll serve --livereload
