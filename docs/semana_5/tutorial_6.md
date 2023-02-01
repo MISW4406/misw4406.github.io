@@ -10,11 +10,11 @@ nav_order: 1
 ## Introducción
 {: .no_toc }
 
-Durante el transcurso de la semana comprendimos los retos para desmentalar el monolito y los posibles patrones y tácticas para dicho propósito. Uno de los puntos mencionados fue que las tácticas y métodos que involucran refactoring en el código pueden incurrir en riesgos y mantenimiento que como negocio estampos poco dispuestos a tolerar. Cuando comenzamos a aplicar los principios y prácticas de arquitecturas basadas en eventos, nos damos cuenta que podemos usar mecanismos no invasivos (o con el mínimo) para poder distribuir los datos a través de los nuevos y existentes servicios. La identificación y publicación de esos conjuntos de datos a través de diferentes dominios (servicios) a sus correspondientes flujos de eventos es lo que llamamos [liberación de datos](https://learning.oreilly.com/library/view/building-event-driven-microservices/9781492057888/ch04.html#idm45380323922504){:target="_blank"}.
+Durante el transcurso de la semana comprendimos los retos para desmentalar el monolito y los posibles patrones y tácticas para dicho propósito. Uno de los puntos mencionados fue que las tácticas y métodos que involucran refactoring en el código pueden incurrir en riesgos y mantenimiento que como negocio estamos poco dispuestos a tolerar. Cuando comenzamos a aplicar los principios y prácticas de arquitecturas basadas en eventos, nos damos cuenta que podemos usar mecanismos no invasivos para poder distribuir los datos a través de los nuevos y existentes servicios. La identificación y publicación de esos conjuntos de datos a través de diferentes dominios (servicios) a sus correspondientes flujos de eventos es lo que llamamos [liberación de datos](https://learning.oreilly.com/library/view/building-event-driven-microservices/9781492057888/ch04.html#idm45380323922504){:target="_blank"}.
 
-En este tutorial vamos implementar dos de los patrónes más populares para la liberación de datos: CDC y Outbox. Para ello, usaremos [Debezium](https://debezium.io/){:target="_blank"} como nuestra solución CDC y el [conector de Debezium para Apache Pulsar](https://archive.apache.org/dist/pulsar/pulsar-2.10.1/connectors/pulsar-io-debezium-mysql-2.10.1.nar){:target="_blank"} (sobra decir que seguiremos usando Apache Pulsar como nuestra broker de eventos).
+En este tutorial vamos implementar dos de los patrónes más populares para la liberación de datos: CDC y Outbox. Para ello, usaremos [Debezium](https://debezium.io/){:target="_blank"} como nuestra solución CDC y el [conector de Debezium para Apache Pulsar](https://archive.apache.org/dist/pulsar/pulsar-2.10.1/connectors/pulsar-io-debezium-mysql-2.10.1.nar){:target="_blank"} (sobra decir que seguiremos usando Apache Pulsar como nuestro broker de eventos).
 
-Por último vamos a usar [MySQL 8](https://dev.mysql.com/doc/relnotes/mysql/8.0/en/){:target="_blank"} como nuestra base datos transaccional. Cabe aclarar que esta podría haber sido cualquier otra, tanto relacional como no relacional.
+Por último, vamos a usar [MySQL 8](https://dev.mysql.com/doc/relnotes/mysql/8.0/en/){:target="_blank"} como nuestra base datos transaccional. Cabe aclarar que esta podría haber sido cualquier otro sistema manejador de bases de datos, tanto relacional como no relacional.
 
 {: .note }
 > Antes de comenzar con el desarrollo, comience viendo el video tutorial donde se explican y elaboran algunos de los métodos a tratar aquí.
@@ -49,7 +49,7 @@ En el caso de la base de datos puede usar una de las imágenes oficiales de MySQ
 > Gitpod puede tardar un poco en instalar las dependencias la primera vez que crea el workspace. Usted puede observar el progreso de la instalación por medio de la vista de terminal en la parte inferior del IDE. Así mismo, en la esquina inferior derecha puede ver los pasos en ejecución con su correspondiente output.
 
 {: .note }
-Dado que para ejecutar Debezium es necesario tener el Broker de eventos funcionando y por ende la base datos. El orden para desplegar los componentes debe ser: Base de datos, Cluster Apache Pulsar y Conector de Debezium.
+Dado que para ejecutar Debezium es necesario tener el Broker de eventos funcionando, y por ende la base datos, el orden para desplegar los componentes debe ser: Base de datos, Cluster Apache Pulsar y Conector de Debezium.
 
 ## Manos a la obra
 
@@ -61,11 +61,11 @@ Durante este tutorial, vamos a enfocarnos a:
 
 ### 1. Despliegue los servicios
 
-Tal como se mostró en el video tutorial, despliegue todos los servicios. En el README del proyecto puede encontrar como desplegar cada servicio de forma autónoma y vea nuevamente dichos pasos en el video tutorial. Recuerde que en nuestro caso puede usar los comandos de docker-compose por medio de `profiles`. 
+Tal como se mostró en el video tutorial, despliegue todos los servicios. En el README del proyecto puede encontrar como desplegar cada servicio de forma autónoma o vea nuevamente dichos pasos en el video tutorial. Recuerde que en nuestro caso puede usar los comandos de docker-compose por medio de `profiles`. 
 
 ### 2. Despliegue el conector Debezium
 
-En el README y video tutorial puede ver los comandos para ejectuar el concetor de debezium usando el CLI Admin de Pulsar. También es buena idea desplegar el consumidor de eventos que el CLI Client de Pulsar nos provee para ver los cambios en tiempo real.
+En el README y video tutorial puede ver los comandos para ejectuar el conector de debezium usando el CLI Admin de Pulsar. También es buena idea desplegar el consumidor de eventos que el CLI Client de Pulsar nos provee para ver los cambios en tiempo real.
 
 ### 3. Cree una nueva tabla
 
@@ -83,9 +83,9 @@ ADD COLUMN valido_desde DATE AFTER vencimiento;
 ```
 
 Revise el cliente ¿Vio algún dato llegar? Nuevamente agreggue un nuevo registro ¿Vio cambios?
-Como tal vez ya lo habrá notado, en los tópicos específicos de cada tabla solo vemos llegar los cambios en los datos: nuevos filas, cambios en los mismos y la posible eliminación. Pero ¿qué pasa si quiero detectar cambios en los DDL? esto puede no sonar tan importante pero la verdad es que por medio de este que podemos ser reactivos para cambiar esquemas en nuestras bases de datos sink. Piense por ejemplo en el caso ya mencionado y suponga que estos eventos que estamos capturando están siendo persistidos en nuestro Data Lake. Puede que ya hayamos creado la tabla para persistir una copia exacta de nuestra tabla pero en formado append-only. Sin embargo, un desarrollador en el backend realiza el cambio y no le avisa al equipo de datos (algo clásico), probablemente nos encontremos en dos situaciones: 1. Insertamos sin el nuevo campo o 2. La inserción falla (dependiendo de como haya cambiado la tabla). 
+Como tal vez ya lo habrá notado, en los tópicos específicos de cada tabla solo vemos llegar los cambios en los datos: nuevas filas, cambios en los mismas y la posible eliminación. Pero ¿qué pasa si quiero detectar cambios en los DDL? esto puede no sonar tan importante pero la verdad es que por medio de éste que podemos ser reactivos para cambiar esquemas en nuestras bases de datos sink. Piense por ejemplo en el caso ya mencionado y suponga que estos eventos que estamos capturando están siendo persistidos en nuestro Data Lake semi-estructurado o Vault. Puede que ya hayamos creado la tabla para persistir una copia exacta de nuestra tabla pero en formato append-only. Sin embargo, ahora un desarrollador en el backend realiza un cambio y no le avisa al equipo de datos (algo clásico). Probablemente nos encontremos en dos situaciones: 1. Insertamos sin el nuevo campo o 2. La inserción falla (dependiendo de como haya cambiado la tabla). 
 
-Para evitar los anterior, Debezium también nos permite vigilar los cambiso de DDL usando el tópico con el nombre del namespace o dataset. Por ende, si usted comienza a oir el tópico `reservas` y al mismo tiempo hace cambios en los esquemas de las tablas, podrá ver eventos llegar ¡Pruebelo! (este [link](https://debezium.io/documentation/reference/2.1/connectors/mysql.html#mysql-schema-change-topic){:target="_blank"} elabora un poco más sobre ello)
+Para evitar los anterior, Debezium también nos permite vigilar los cambios de DDL usando el tópico con el nombre del namespace o dataset. Por ende, si usted comienza a oir el tópico `reservas` y al mismo tiempo hace cambios en los esquemas de las tablas, podrá ver eventos llegar ¡Pruebelo! (este [link](https://debezium.io/documentation/reference/2.1/connectors/mysql.html#mysql-schema-change-topic){:target="_blank"} elabora un poco más sobre ello)
 
 ### 4. Manejo de fallos
 
@@ -96,4 +96,4 @@ Asuma ahora que hay fallos con la base de datos. Por ejemplo, pare ahora mismo l
 
 ### 5. Juegue con la herramienta
 
-Ya habiendo comprendido los features de Debezium y CDC, juegue un poco con la herramienta. Una buena forma es modificar el archivo de configuración y ver como cambia la ingestión de los datos. Para ello, use la [siguiente tabla](https://debezium.io/documentation/reference/2.1/connectors/mysql.html#_required_debezium_mysql_connector_configuration_properties){:target="_blank"}. Por ejemplo, como podríamos en este ejemplo evitar traer el código de los cupones, probablemente transmitir dicha información es riesgosa, pues alguién podría usar esos cupones. Revisa en la documentación de Debezium como podemos limitar transferencia de tablas y columnas.
+Ya habiendo comprendido los features de Debezium y CDC, juegue un poco con la herramienta. Una buena forma es modificar el archivo de configuración y ver como cambia la ingestión de los datos. Para ello, use la [siguiente tabla](https://debezium.io/documentation/reference/2.1/connectors/mysql.html#_required_debezium_mysql_connector_configuration_properties){:target="_blank"}. Por ejemplo, ¿Cómo podríamos en este ejemplo evitar traer el código de los cupones? probablemente transmitir dicha información es riesgosa, pues alguién podría usar esos cupones para su propia beneficio. Revise en la documentación de Debezium como podemos limitar transferencia de tablas y columnas.
