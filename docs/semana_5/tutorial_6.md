@@ -1,5 +1,5 @@
 ---
-title: Tutorial 6 - Liberación de datos: CDC y Outbox
+title: Tutorial 6 - Liberación de datos con CDC y Outbox
 layout: default
 parent: Semana 5
 nav_order: 1
