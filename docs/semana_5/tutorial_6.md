@@ -67,7 +67,7 @@ Tal como se mostró en el video tutorial, despliegue todos los servicios. En el 
 
 En el README y video tutorial puede ver los comandos para ejectuar el concetor de debezium usando el CLI Admin de Pulsar. También es buena idea desplegar el consumidor de eventos que el CLI Client de Pulsar nos provee para ver los cambios en tiempo real.
 
-### 4.Cree una nueva tabla
+### 3. Cree una nueva tabla
 
 Cree una nueva tabla en el dataset `reservas` en su base de datos MySQL de forma manual. Por ejemplo algo del estilo:
 
