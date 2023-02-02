@@ -39,7 +39,7 @@ Si esta usando Gitpod puede ejecutar su código de forma inmediata. De lo contra
 
 En el caso de Docker, es necesario que instale [Docker Desktop](https://www.docker.com/products/docker-desktop/){:target="_blank"} en su máquina de desarrollo y ejecute los comandos que puede encontrar en el archivo `.gitpod.yml`.
 
-Para configurar Apache Pulsar debe configurar el cluster completo con los brokers, bookies y zookeepper. En ambientes locales lo mejor que puede hacer es usar el archivo [docker-compose.yml](https://github.com/MISW4406/tutorial-5-cqrs-eventos/blob/main/docker-compose.yml){:target="_blank"} que encuentra en el repositorio. Así mismo, puede encontrar los archivos `.Dockerfile` para cada uno de los servicios que se deben desplegar. **Es importante tener en cuenta las configuraciones de red de los servicios**, si tiene muchos problemas entre ellos, deje que todos los servicios exponan en la interface 0.0.0.0 y todos se expongan en su localhost.
+Para configurar Apache Pulsar debe configurar el cluster completo con los brokers, bookies y zookeepper. En ambientes locales lo mejor que puede hacer es usar el archivo [docker-compose.yml](https://github.com/MISW4406/tutorial-6-cdc/blob/main/docker-compose.yml){:target="_blank"} que encuentra en el repositorio. Así mismo, puede encontrar los archivos `.Dockerfile` para cada uno de los servicios que se deben desplegar. **Es importante tener en cuenta las configuraciones de red de los servicios**, si tiene muchos problemas entre ellos, deje que todos los servicios exponan en la interface 0.0.0.0 y todos se expongan en su localhost.
 
 Para la configuración de Debezium puede usar el conector que ya se encuentra en el directorio `connectors/pulsar/` llamado `pulsar-io-debezium-mysql-2.10.1.nar` y el archivo de configuración `debezium-mysql-source-config.yaml`. Si desea descargar un versión distinta del conector puede usar el siguiente [link](https://pulsar.apache.org/download/){:target="_blank"}.
 
@@ -58,6 +58,8 @@ Comience por entender los cambios en la estructura del proyecto. Este ya contien
 Durante este tutorial, vamos a enfocarnos a:
 
 1. Entender el funcionamiento de CDC y Outbox.
+2. Entender como Debezium y en general las herramientas de CDC administran los cambios y procesan eventos de DDL
+3. Entender como las herramientas de CDC reaccionan ante fallos y privacidad de los datos.
 
 ### 1. Despliegue los servicios
 
