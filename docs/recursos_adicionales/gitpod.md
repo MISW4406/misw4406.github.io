@@ -21,7 +21,7 @@ El código es desarrollado y ejecutado fuera en clusters con ambientes virtuales
 ## ¿Qué es y cómo funciona?
 {: .no_toc }
 
-[Gitpod](https://www.gitpod.io/) {:target="_blank"} Gitpod es una plataforma en la nube que permite el desarrollo de software por medio de la creación de "espacios de trabajo" (workspaces) personales. Los espacios de trabajo se basan en Linux y se pueden automatizar mediante la configuración de un gitpod.yml y/o una imagen del espacio de trabajo, como Docker. Los espacios de trabajo son efímeros y están completamente aislados, con permisos completos de superusuario.
+[Gitpod](https://www.gitpod.io/){:target="_blank"} Gitpod es una plataforma en la nube que permite el desarrollo de software por medio de la creación de "espacios de trabajo" (workspaces) personales. Los espacios de trabajo se basan en Linux y se pueden automatizar mediante la configuración de un gitpod.yml y/o una imagen del espacio de trabajo, como Docker. Los espacios de trabajo son efímeros y están completamente aislados, con permisos completos de superusuario.
 Todo lo que puede hacer en Linux, puede hacerlo en Gitpod. Puede utilizar Gitpod para aplicaciones de interfaz de usuario de escritorio nativa y 
 de interfaz gráfica de usuario (GUI) a través de Virtual Networking Computing (VNC), para lograr una experiencia comparable a la infraestructura de 
 escritorio virtual (VDI) pero totalmente optimizada para la experiencia del desarrollador.
