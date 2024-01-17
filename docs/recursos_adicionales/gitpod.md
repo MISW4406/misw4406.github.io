@@ -13,9 +13,9 @@ nav_order: 1
 Los entornos de desarrollo en la nube (CDE) son entornos de desarrollo bajo demanda que están preconfigurados con todas las herramientas, 
 librerías y dependencias necesarias para escribir y revisar código. Se pueden duplicar y compartir fácilmente entre equipos.
 
-Compañías como Google, Facebook, Uber, Spotify, entre otras, han decidido crear ambientes virtuales de desarrallo para sus desarrolladores. Ello permite, 
+Compañías como Google, Facebook, Uber, Spotify, entre otras, han decidido crear ambientes virtuales de desarrollo para sus desarrolladores. Ello permite, 
 que los ingenieros no requieran instalar librerias, aplicaciones y de más dependencias para correr el código en sus máquinas personales. 
-El código es desarrollado y ejecutado fuera en clusters con ambientes virtuales que incluso pueden ser más cercanos a los ambientes de despliegue 
+El código es desarrollado y ejecutado en clusters con ambientes virtuales que incluso pueden ser más cercanos a los ambientes de despliegue 
 (haciendo que la brecha entre los ambientes de producción y desarrollo sea mínima).
 
 ## ¿Qué es y cómo funciona?
