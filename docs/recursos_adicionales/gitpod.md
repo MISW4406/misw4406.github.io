@@ -30,7 +30,7 @@ La ventaja de los workspaces es la capacidad de tener ambientes de desarrollo to
 perder el tiempo instalando y configurando dependencias, los espacios de trabajo cuentan con el sistema operativo, dependencias, configuración y librerías necesarias para 
 que el desarrollador comience a trabajar directamente en el código.
 
-<iframe width="420" height="315" src="https://www.youtube.com/watch?v=lyoc5TVWM0k&t=28s" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lyoc5TVWM0k?si=a7OQSD5QUTSpkESI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
 ## Acceso a la plataforma
