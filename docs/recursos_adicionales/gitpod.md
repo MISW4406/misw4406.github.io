@@ -83,3 +83,5 @@ ya tiene disponible el último código.
 
 Para ver un ejemplo de configuración completo, puede utilizar el siguiente [link](https://www.gitpod.io/docs/configure/workspaces){:target="_blank"} y 
 seguir los pasos descritos en la documentación oficial.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fA2fpqP1xaM?si=V2tMKtP6ZN1OqMBT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
