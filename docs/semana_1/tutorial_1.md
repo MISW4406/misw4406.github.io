@@ -86,7 +86,7 @@ En términos de sesiones, lo mejor que puede hacer es una mezcla entre sesiones 
 
 Como mencioné anteriormente, el uso de hojas de cálculo puede ser un poco arcaico y difícil de mantener a futuro. Es por eso, que el uso de herramientas especializadas puede ser la mejor opción a usar una vez se llegó a un acuerdo con los expertos de dominio. Las herramientas de [linaje y providencia de los datos](https://learning.oreilly.com/library/view/business-intelligence-cookbook/9781849685481/ch08s06.html#ch08lvl2sec13){:target="_blank"} pueden ser de gran utilidad en este proceso. Además, está ayudando al proceso de gobierno de datos.
 
-Para ver un [ejemplo en vivo](https://demo.datahubproject.io/glossaryNode/urn:li:glossaryNode:c1f73454-a312-459a-a1f3-d22c799cd4c1/Contents?is_lineage_mode=false){:target="_blank"} puede usar el producto [DataHub](https://datahubproject.io/){:target="_blank"}. Juegue con el ejemplo y si cree que éste le puede servir para el proyecto o trabajo siga los siguientes tutoriales de instalación.
+Para ver un [ejemplo en vivo](https://demo.datahubproject.io/glossary){:target="_blank"} puede usar el producto [DataHub](https://datahubproject.io/){:target="_blank"}. Juegue con el ejemplo y si cree que éste le puede servir para el proyecto o trabajo siga los siguientes tutoriales de instalación.
 
 1. [Despliegue en máquina virtual GCP](https://datahubproject.io/docs/deploy/gcp){:target="_blank"}
 2. [Despliegue en Kubernetes](https://datahubproject.io/docs/deploy/kubernetes){:target="_blank"}
