@@ -91,7 +91,7 @@ Para evitar los anterior, Debezium también nos permite vigilar los cambios de D
 
 ### 4. Manejo de fallos
 
-Asuma ahora que hay fallos con la base de datos. Por ejemplo, pare ahora mismo la base de datos ¿Que vio? Vuelvala a subir y agregue registros ¿Sigue funcionando? Aunque CDC es una gran tecnología sigue siendo una herramienta más que nos puede dar dolores de cabeza. Piense como usted podría tolerar y manejar dichos fallos. El siguiente [link](https://pulsar.apache.org/download/){:target="_blank"} oficial de Debezium elabora un poco más acerca de este tópico.
+Asuma ahora que hay fallos con la base de datos. Por ejemplo, pare ahora mismo la base de datos ¿Que vio? Vuelvala a subir y agregue registros ¿Sigue funcionando? Aunque CDC es una gran tecnología sigue siendo una herramienta más que nos puede dar dolores de cabeza. Piense como usted podría tolerar y manejar dichos fallos. El siguiente [artículo](https://levelup.gitconnected.com/fixing-debezium-connectors-when-they-break-on-production-49fb52d6ac4e) es una muy buena fuente para entender los posibles errores y cómo solucionarlos cuando usamos Debezium.
 
 {: .note }
 > Si se siente más "osado" en el directorio `/data` busque los archivos de bin logs y elimine uno.
