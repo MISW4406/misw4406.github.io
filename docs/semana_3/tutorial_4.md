@@ -78,7 +78,7 @@ Dado que su código ha cambiado, vuelva a crear la imagen para el servicio de ad
 
 ### 6. Publicar imágenes
 
-Una vez con las imágenes, publíquelas en algún [Container Registry](https://www.redhat.com/en/topics/cloud-native-apps/what-is-a-container-registry){:target="_blank"}. Si usa GCP puede seguir las siguientes [instrucciones](https://cloud.google.com/container-registry/docs/pushing-and-pulling){:target="_blank"}.
+Una vez con las imágenes, publíquelas en algún [Container Registry](https://www.redhat.com/en/topics/cloud-native-apps/what-is-a-container-registry){:target="_blank"}. Si usa GCP puede seguir las siguientes [instrucciones](https://cloud.google.com/artifact-registry/docs/docker/pushing-and-pulling){:target="_blank"}.
 
 ### 7. Despliegue su servicio
 
