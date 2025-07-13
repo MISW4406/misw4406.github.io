@@ -17,7 +17,32 @@ Compañías como Google, Facebook, Uber, Spotify, entre otras, han decidido crea
 ## ¿Qué es y cómo funciona?
 {: .no_toc }
 
-Un devcontainer describe la configuración de un entorno mediante archivos de texto versionados. GitHub Codespaces lee dicha configuración y crea un espacio de trabajo aislado con todo lo que se necesita para editar, compilar y ejecutar la aplicación. Los contenedores se pueden personalizar con extensiones y herramientas adicionales.
+[GitHub Codespaces](https://github.com/features/codespaces){:target="_blank"} es una plataforma de desarrollo en la nube totalmente integrada con GitHub que permite crear **espacios de trabajo preconfigurados y listos para codificar**, directamente desde cualquier repositorio.
+
+Estos entornos se basan en **contenedores Linux** y se personalizan mediante archivos de configuración como `devcontainer.json`, lo que permite definir:
+
+- El sistema operativo base
+- Herramientas de desarrollo
+- Extensiones de Visual Studio Code
+- Dependencias y comandos de inicialización del proyecto
+
+Cada Codespace corre en una **máquina virtual aislada y efímera**, con acceso completo al código fuente. Puede usarse desde el navegador o mediante el cliente de escritorio de **Visual Studio Code**, ofreciendo una experiencia de desarrollo completa desde cualquier lugar.
+
+### Ventajas principales
+
+- 🔁 **Entornos consistentes y reproducibles** para todo el equipo
+- 🚫 Elimina el problema de "funciona en mi máquina"
+- ⚡ **Inicio rápido** de espacios de trabajo sin instalaciones locales
+- 🧩 **Integración nativa con GitHub**, incluyendo Actions y CI/CD
+- 🌐 Soporte para aplicaciones web y redirección de puertos
+- 🖥️ Soporte para interfaces gráficas vía extensiones o port forwarding
+
+> Cada integrante del equipo puede comenzar a trabajar en el código en segundos, sin preocuparse por configuraciones locales ni dependencias específicas.
+
+### Video explicativo
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Lseaqxg8NaY?si=60KYVWKI0oYNDixM" title="GitHub Codespaces Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 
 ## Acceso a la plataforma
 {: .no_toc }
@@ -61,4 +86,4 @@ Gracias a que los Codespaces están configurados como código, puede iniciarlos 
 
 Puede consultar la [documentación oficial de Codespaces](https://docs.github.com/codespaces){:target="_blank"} para ver ejemplos completos de configuración y creación de devcontainers.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/b9SfmZIY8Rk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Lseaqxg8NaY?si=60KYVWKI0oYNDixM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
