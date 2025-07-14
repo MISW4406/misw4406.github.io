@@ -31,7 +31,7 @@ Conda se utiliza a través de la línea de comandos. Una vez instalado, puedes c
 ## Un entorno por tarea o proyecto
 {: .no_toc }
 
-Imagina esto: estás trabajando en varias cosas a la vez, como añadir una nueva función, arreglar un error urgente o revisar el código de un compañero. Cada una de estas tareas puede necesitar diferentes versiones de librerías o dependencias.
+**Imagina esto:** estás trabajando en varias cosas a la vez, como añadir una nueva función, arreglar un error urgente o revisar el código de un compañero. Cada una de estas tareas puede necesitar diferentes versiones de librerías o dependencias.
 
 Aquí es donde Conda brilla. Te permite crear un entorno Conda limpio y aislado para cada tarea o proyecto. ¿Necesitas hacer varias cosas a la vez? Sin problema. Puedes tener distintos entornos activos en terminales separadas, lo que te da la flexibilidad de cambiar entre configuraciones sin que haya conflictos. Por ejemplo, mientras trabajas en una función, puedes pasar rápidamente a otro entorno para probar una corrección de un error crítico. Una vez que terminas, simplemente desactivas ese entorno y sigues con tu trabajo principal. Así de fácil es mantener tu espacio de desarrollo organizado y eficiente.
 
