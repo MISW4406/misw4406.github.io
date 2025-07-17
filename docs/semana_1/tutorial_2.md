@@ -59,11 +59,12 @@ Al revisar el demo para Codespaces, encontrará un archivo `devcontainer.json` s
 ###### devcontainer.json
 ```json
 {
-  "image": "mcr.microsoft.com/devcontainers/java:0-17",
+  "name": "misw4406",
+  "image": "mcr.microsoft.com/vscode/devcontainers/python:3.12",
   "features": {
-    "ghcr.io/devcontainers/features/python:1": {"version": "3.12"}
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
   },
-  "postCreateCommand": "sudo apt-get update && sudo apt-get -y install graphviz && npm install -g generator-jhipster"
+  "postCreateCommand": "bundle install"
 }
 ```
 
