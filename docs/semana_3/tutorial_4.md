@@ -10,7 +10,7 @@ nav_order: 1
 ## Introducción
 {: .no_toc }
 
-Hasta ahora en la semana, hemos aprendido acerca de los diferentes tipos de patrones en sistemas distribuidos. Conocimos que la primera categoría es la llamada **Single-Node** y que de ella podemos encontrar los patrones: Sidecar, adaptador y embajador. En este tutorial, entraremos aún más en los detalles de implementación de dichos patrones, enfocándonos especialmente en los [adaptadores](https://learning.oreilly.com/library/view/kubernetes-patterns-2nd/9781098131678/ch08.html){:target="_blank"}. En la web usted podrá encontrar [varios ejemplos](https://www.weave.works/blog/kubernetes-patterns-the-adapter-pattern){:target="_blank"} *"Hello World"* acerca de los Sidecars, para el uso de [logging y monitoreo](https://sensu.io/resources/whitepaper/whitepaper-monitoring-kubernetes-the-sidecar-pattern){:target="_blank"}. Sin embargo, aunque dichos ejemplos siguen siendo relevantes, estos patrones pueden ser de aún mayor utilidad para desmantelar nuestro monolito. 
+Hasta ahora en la semana, hemos aprendido acerca de los diferentes tipos de patrones en sistemas distribuidos. Conocimos que la primera categoría es la llamada **Single-Node** y que de ella podemos encontrar los patrones: Sidecar, adaptador y embajador. En este tutorial, entraremos aún más en los detalles de implementación de dichos patrones, enfocándonos especialmente en los [adaptadores](https://learning.oreilly.com/library/view/kubernetes-patterns-2nd/9781098131678/ch08.html){:target="_blank"}. En la web usted podrá encontrar [varios ejemplos](https://kubernetes.io/blog/2015/06/the-distributed-system-toolkit-patterns){:target="_blank"} *"Hello World"* acerca de los Sidecars, para el uso de [logging y monitoreo](https://sensu.io/resources/whitepaper/whitepaper-monitoring-kubernetes-the-sidecar-pattern){:target="_blank"}. Sin embargo, aunque dichos ejemplos siguen siendo relevantes, estos patrones pueden ser de aún mayor utilidad para desmantelar nuestro monolito. 
 
 Por tal motivo, durante este tutorial también conoceremos acerca de [gRPC](https://grpc.io/){:target="_blank"} y [Protocol Buffers](https://developers.google.com/protocol-buffers/docs/proto3?hl=es-419){:target="_blank"} (Protobuf). Veremos en AeroAlpes un ejemplo en donde deseamos crear un adaptador gRPC para que servicios externos se comuniquen con AeroAlpes, sin que sea necesario hacer un refactoring en el código de AeroAlpes.
 
@@ -27,13 +27,13 @@ Por tal motivo, durante este tutorial también conoceremos acerca de [gRPC](http
 
 ## Preparación
 
-Haga un fork del template de [AeroAlpes](https://github.com/MISW4406/tutorial-4-sidecar){:target="_blank"} en su repositorio de preferencia. Si necesita ayuda en como realizar este paso, use alguno de los siguientes links:
+Haga un fork del template de [AeroAlpes](https://github.com/MISW4406/tutorial-4-sidecar){:target="_blank"} en su repositorio de preferencia. Si necesita ayuda en cómo realizar este paso, use alguno de los siguientes links:
 
 1. [Fork Github a Github](https://docs.github.com/en/get-started/quickstart/fork-a-repo){:target="_blank"}
 2. [Fork de Github a Gitlab](https://stackoverflow.com/questions/50973048/forking-git-repository-from-github-to-gitlab){:target="_blank"}
 3. [Fork de Github a Bitbucket](https://stackoverflow.com/questions/8137997/forking-from-github-to-bitbucket){:target="_blank"}
 
-Si esta usando Gitpod puede ejecutar su código de forma inmediata. De lo contrario, instale las dependencias en su máquina o ambiente de desarrollo, usando el archivo de `requirements.txt`. La versión de Python que se usa es 3.10 pero el requerimiento mínimo es de 3.7. Para crear ambiente de desarrollo virtuales en su máquina local, es sugerible usar [Conda](https://docs.conda.io/en/latest/){:target="_blank"}, en los recursos adicionales del sitio puede encontrar un [documento](/docs/recursos_adicionales/conda){:target="_blank"} sobre su configuración.
+Si está usando Github Codespaces puede ejecutar su código de forma inmediata. De lo contrario, instale las dependencias en su máquina o ambiente de desarrollo, usando el archivo de `requirements.txt`. La versión de Python que se usa es 3.10 pero el requerimiento mínimo es de 3.7. Para crear ambientes de desarrollo virtuales en su máquina local, es sugerible usar [Conda](https://docs.conda.io/en/latest/){:target="_blank"}, en los recursos adicionales del sitio puede encontrar un [documento](/docs/recursos_adicionales/conda){:target="_blank"} sobre su configuración.
 
 En el caso de Docker, es necesario que instale [Docker Desktop](https://www.docker.com/products/docker-desktop/){:target="_blank"} en su máquina de desarrollo y ejecute los comandos que puede encontrar en el archivo `.gitpod.yml`.
 
@@ -74,11 +74,11 @@ Una vez con los cambios, corra el servidor y el cliente para probar. En el archi
 
 ### 5. Recrear la imagen Docker
 
-Dado que su código ha cambiado, vuelva a crear la imagen para el servicio de adaptador. Si no recuerda como recrear imágenes en Docker puede consultar los comandos en el archivo README del repositorio.
+Dado que su código ha cambiado, vuelva a crear la imagen para el servicio de adaptador. Si no recuerda cómo recrear imágenes en Docker puede consultar los comandos en el archivo README del repositorio.
 
 ### 6. Publicar imágenes
 
-Una vez con las imágenes, publíquelas en algún [Container Registry](https://www.redhat.com/en/topics/cloud-native-apps/what-is-a-container-registry){:target="_blank"}. Si usa GCP puede seguir las siguientes [instrucciones](https://cloud.google.com/container-registry/docs/pushing-and-pulling){:target="_blank"}.
+Una vez con las imágenes, publíquelas en algún [Container Registry](https://www.redhat.com/en/topics/cloud-native-apps/what-is-a-container-registry){:target="_blank"}. Si usa GCP puede seguir las [instrucciones de la nueva versión de Artifact Registry](https://cloud.google.com/artifact-registry/docs/docker/pushing-and-pulling){:target="_blank"}.
 
 ### 7. Despliegue su servicio
 
@@ -87,4 +87,4 @@ Usando el template `.yml` que encuentra en el repositorio, adáptelo a sus neces
 ### 8. Prueba final
 
 {: .task}
-> Una vez desplegado el servicio, cambie el `hostname` en el cliente y trate de ejectuar los cambios: crear una reserva y consultarla.
+> Una vez desplegado el servicio, cambie el `hostname` en el cliente y trate de ejecutar los cambios: crear una reserva y consultarla.
