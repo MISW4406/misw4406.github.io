@@ -27,25 +27,24 @@ En este tutorial vamos a explorar un [DSL](https://en.wikipedia.org/wiki/Domain-
 
 ## Preparación
 
-A lo largo de este curso vamos a usar diferentes herramientas, frameworks y tecnologías que pueden constituir una misión de configurar en nuestras máquinas personales. Es por eso, que en este curso se sugiere el uso de ambientes de desarollo virtuales. A continuación se presentan algunas alternativas a utilizar:
+A lo largo de este curso vamos a usar diferentes herramientas, frameworks y tecnologías que pueden constituir una misión de configurar en nuestras máquinas personales. Es por eso, que en este curso se sugiere el uso de ambientes de desarrollo virtuales. A continuación se presentan algunas alternativas a utilizar:
 
-1. [Gitpod](https://www.gitpod.io/){:target="_blank"}
-2. [Github Codespaces](https://github.com/features/codespaces){:target="_blank"}
-3. [CodeAnywhere](https://codeanywhere.com/){:target="_blank"}
-4. [Cloud Code](https://cloud.google.com/code){:target="_blank"}
+1. [Github Codespaces](https://github.com/features/codespaces){:target="_blank"}
+2. [CodeAnywhere](https://codeanywhere.com/){:target="_blank"}
+3. [Cloud Code](https://cloud.google.com/code){:target="_blank"}
 
 {: .important}
 > Las diferentes soluciones pueden tener **costos asociados**. Algunas cuentan con una capa gratuita con un máximo de horas que en principio debe ser suficiente. Sin embargo, **NO ES OBLIGATORIO EL USO DE ESTAS HERRAMIENTAS**, si usted siente que puede hacerlo de forma local en su máquina, siga adelante.
 
-En nuestro caso usaremos Gitpod, por lo que podrá ver que los repositorios contarán con la configuración e imágenes Docker para su correcta ejecución.
+En nuestro caso usaremos Github Codespaces, por lo que los repositorios incluyen un devcontainer para su correcta ejecución.
 
 ### Repositorio
 
 Cree un repositorio GIT para el proyecto de documentación. Puede usar cualquiera de los servicios cloud, tales como [Github](https://github.com/){:target="_blank"}, [Gitlab](https://about.gitlab.com/){:target="_blank"}, [Bitbucket](https://bitbucket.org/){:target="_blank"}, etc. Tenga en cuenta, que tanto este sitio como los diferentes repositorios se encuentran en Github.
 
-### Gitpod
+### Codespaces
 
-Para comenzar a usar Gitpod, siga el siguiente [tutorial oficial](https://www.gitpod.io/docs/introduction/getting-started){:target="_blank"}, el cual le ayudará a configurar workspaces y brindar los principios básicos de la herramienta.
+Para comenzar a usar Codespaces, siga el [tutorial oficial](https://docs.github.com/codespaces/getting-started){:target="_blank"}, el cual le ayudará a configurar workspaces y brindar los principios básicos de la herramienta.
 
 ## ContextMapper
 
@@ -53,32 +52,20 @@ En este tutorial y a lo largo del curso usaremos la herramienta [Context Mapper]
 
 ### 1. Instalación
 
-Tenga en cuenta los requerimientos de sistema presentados en la [documentación oficial](https://contextmapper.org/docs/getting-started/){:target="_blank"}. En el caso de Gitpod debe instalar la [extensión](https://open-vsx.org/extension/contextmapper/context-mapper-vscode-extension){:target="_blank"} de Visual Studio. Para ver un ejemplo funcionando puede usar el [demo](https://contextmapper.org/demo/){:target="_blank"} y comenzar desde ahí. Este link creará un workspace el cual usted puede usar para ver los archivos y configuración necesaria. 
+Tenga en cuenta los requerimientos de sistema presentados en la [documentación oficial](https://contextmapper.org/docs/getting-started/){:target="_blank"}. Si utiliza Codespaces, la [extensión](https://open-vsx.org/extension/contextmapper/context-mapper-vscode-extension){:target="_blank"} de Visual Studio Code se instala automáticamente desde el devcontainer. Para ver un ejemplo funcionando puede usar el [demo](https://contextmapper.org/demo/){:target="_blank"}, el cual crea un Codespace listo para trabajar.
 
-Al revisar el demo en Gitpod, podrá ver algunos archivos necesarios para la ejecución:
+Al revisar el demo para Codespaces, encontrará un archivo `devcontainer.json` similar al siguiente:
 
-###### gitpod.Dockerfile
-```dockerfile
-FROM gitpod/workspace-full
-
-# Install Graphviz
-RUN sudo apt-get update \
-    && sudo apt-get -y install graphviz
-
-# Install JHipster
-RUN npm install -g generator-jhipster
-```
-
-###### gitpod.yml
-```yml
-tasks:
-  - init: ./gradlew clean build
-image:
-  file: .gitpod.Dockerfile
-vscode:
-  extensions:
-    - contextmapper.context-mapper-vscode-extension
-    - jebbs.plantuml
+###### devcontainer.json
+```json
+{
+  "name": "misw4406",
+  "image": "mcr.microsoft.com/vscode/devcontainers/python:3.12",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "postCreateCommand": "bundle install"
+}
 ```
 
 ###### build.gradle

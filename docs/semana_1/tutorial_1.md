@@ -124,7 +124,7 @@ Como se ha dicho anteriormente, Event Storming nació para ser un proceso co-loc
 3. [Lucid](https://lucid.app/){:target="_blank"}
 4. [Figma](https://www.figma.com/){:target="_blank"}
 
-En este tutorial, el [template](https://miro.com/app/board/uXjVPBntbg8=/){:target="_blank"} está desarollado en [Miro](https://miro.com/){:target="_blank"}. Sin embargo, sientase en la libertad de usar cualquier herramienta que le brinde los beneficios colaborativos y de diseño que este método requiere.
+En este tutorial, el [template](https://miro.com/app/board/uXjVPBntbg8=/){:target="_blank"} está desarrollado en [Miro](https://miro.com/){:target="_blank"}. Sin embargo, siéntase en la libertad de usar cualquier herramienta que le brinde los beneficios colaborativos y de diseño que este método requiere.
 
 ##### 3. Convención
 
@@ -137,7 +137,7 @@ A través de la web podrán encontrar diferentes convenciones para los diferente
 | Actor                  | El quién o que inicia una acción | ![Actor](/assets/img/tutorial-1-eventstorm-actor.png)       |
 | Definición             | Definen términos de negocio. En cualquier caso donde se encuentre con un término específico del negocio, acrónimo o incluso del argot común, use este post-it | ![Definición](/assets/img/tutorial-1-eventstorm-definicion.png)       |
 | UI             | Bosquejos de la UI para hacernos una idea del sistema. Aunque la estamos describiendo en esta sección, la verdad es que este post-it tiene más sentido en el formato nivel de diseño | ![Definición](/assets/img/tutorial-1-eventstorm-ui.png)       |
-| Reglas de negocio             | Documentan condiciones y reglas de negocio. Normalmente se localizan entre eventos y siguen la sintáxis Gherkin: `Dado <evento en presente> cuando <condición> entonces <evento en presente>` | ![Definición](/assets/img/tutorial-1-eventstorm-regla-negocio.png)       |
+| Reglas de negocio             | Documentan condiciones y reglas de negocio. Normalmente se localizan entre eventos y siguen la sintaxis Gherkin: `Dado <evento en presente> cuando <condición> entonces <evento en presente>` | ![Definición](/assets/img/tutorial-1-eventstorm-regla-negocio.png)       |
 | Modelo de lectura            | Los datos que debemos proveer para un paso en nuestro workflow | ![Definición](/assets/img/tutorial-1-eventstorm-modelo-lectura.png)      |
 | Sistema externo           | Organizaciones, servicios o aplicaciones externas o de terceros| ![Definición](/assets/img/tutorial-1-eventstorm-sistema-externo.png)       |
 | [Agregación](https://learning.oreilly.com/library/view/implementing-domain-driven-design/9780133039900/ch10.html){:target="_blank"}          | Son agrupamiento de objetos asociados que trataremos como unidad para el propósito de cambios. Por ahora, no vamos a entrar en detalle acerca de ellas. | ![Definición](/assets/img/tutorial-1-eventstorm-agregacion.png)       |
@@ -155,7 +155,7 @@ Use toda la información que tiene acerca de AeroAlpes y diseñe un lenguaje ubi
 
 #### Nivel de diseño
 
-El formato a nivel de diseño se centra en el diseño del sistema e involucra desarolladores, product managers, diseñadores y managers de ingeniería. Tiende a ser un poco menos caótico que el formato Big Picture, el cual se enfoca en exploración, mientras que este tiene como prioridades el diseño y construcción.
+El formato a nivel de diseño se centra en el diseño del sistema e involucra desarrolladores, product managers, diseñadores y managers de ingeniería. Tiende a ser un poco menos caótico que el formato Big Picture, el cual se enfoca en exploración, mientras que este tiene como prioridades el diseño y construcción.
 
 Este tutorial no va a entrar en detalle acerca de este formato, pero puede ver un paso en el [Material Adicional](#material-adicional).
 

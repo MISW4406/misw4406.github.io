@@ -10,6 +10,7 @@ nav_order: 1
 Bienvenido al sitio del curso de **Diseño y contrucción de soluciones no monolíticas** en este sitio encontrará recursos y material que le ayudará durante todo su trayecto.
 
 Al ser un sitio en [Github Pages](https://pages.github.com/){:target="_blank"}, sientase en la libertad de crear PRs y sugerencias en el mismo. Recuerde que como comunidad podemos tener aún mejor material.
+Este repositorio utiliza devcontainers para proporcionar un entorno de desarrollo coherente.
 
 ## Guía para el sitio y convenciones
 
@@ -27,9 +28,8 @@ Al ser un sitio en [Github Pages](https://pages.github.com/){:target="_blank"}, 
 
 ## Herramientas y frameworks usados
 
-| Categoría                 | Herramienta/Framework     | Uso obligatorio                                   |
-| -----------               | -----------               | -----------                                       | 
-| Version Control           | Github                    | No (pero si el uso de alguno)                     |
-| Lenguaje programación     | Python >= 3.7             | Si                                                |
-
-
+| Categoría                 | Herramienta/Framework | Uso obligatorio |
+| -----------               | -----------           | ----------- |
+| Version Control           | Github                | No (pero si el uso de alguno) |
+| Lenguaje programación     | Python >= 3.12        | Si |
+| Entorno de desarrollo     | Devcontainers         | Si |
