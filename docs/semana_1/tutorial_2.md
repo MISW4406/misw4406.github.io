@@ -52,19 +52,28 @@ En este tutorial y a lo largo del curso usaremos la herramienta [Context Mapper]
 
 ### 1. Instalación
 
-Tenga en cuenta los requerimientos de sistema presentados en la [documentación oficial](https://contextmapper.org/docs/getting-started/){:target="_blank"}. Si utiliza Codespaces, la [extensión](https://open-vsx.org/extension/contextmapper/context-mapper-vscode-extension){:target="_blank"} de Visual Studio Code se instala automáticamente desde el devcontainer. Para ver un ejemplo funcionando puede usar el [demo](https://contextmapper.org/demo/){:target="_blank"}, el cual crea un Codespace listo para trabajar.
+Tenga en cuenta los requerimientos de sistema presentados en la [documentación oficial](https://contextmapper.org/docs/getting-started/){:target="_blank"}. Si utiliza Codespaces, la [extensión](https://open-vsx.org/extension/contextmapper/context-mapper-vscode-extension){:target="_blank"} de Visual Studio Code se instala automáticamente desde el devcontainer. Para ver un ejemplo funcionando puede usar el [demo](https://github.com/MISW4406/tutorial-2-mapas-contexto){:target="_blank"}, el cual crea un Codespace listo para trabajar.
 
 Al revisar el demo para Codespaces, encontrará un archivo `devcontainer.json` similar al siguiente:
 
 ###### devcontainer.json
 ```json
 {
-  "name": "misw4406",
-  "image": "mcr.microsoft.com/vscode/devcontainers/python:3.12",
-  "features": {
-    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  "name": "Context Mapper Dev Container",
+  "build": {
+    "dockerfile": "Dockerfile"
   },
-  "postCreateCommand": "bundle install"
+  "postCreateCommand": "./gradlew clean build",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "jebbs.plantuml",
+        "contextmapper.context-mapper-vscode-extension",
+        "vscjava.vscode-java-pack",
+        "asciidoctor.asciidoctor-vscode"
+      ]
+    }
+  }
 }
 ```
 
