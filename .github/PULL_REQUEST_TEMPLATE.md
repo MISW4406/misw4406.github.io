@@ -4,6 +4,6 @@
 +
 
 ### Lista de chequeo
-- [ ] Ejecuté el proyecto de forma local o usando Gitpod
+- [ ] Ejecuté el proyecto de forma local o usando Github Codespaces
 - [ ] Corrí todas las pruebas
 - [ ] Agregué o modifiqué pruebas
