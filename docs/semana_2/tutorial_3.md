@@ -25,16 +25,16 @@ A lo largo de esta semana exploramos diferentes conceptos, principios y patrones
 
 ## Preparación
 
-Haga un fork del template de [AeroAlpes](https://github.com/MISW4406/tutorial-3-arquitectura-hexagonal){:target="_blank"} en su repositorio de preferencia. Si necesita ayuda en como realizar este paso, use alguno de los siguientes links:
+Haga un fork del template de [AeroAlpes](https://github.com/MISW4406/tutorial-3-arquitectura-hexagonal){:target="_blank"} en su repositorio de preferencia. Si necesita ayuda en cómo realizar este paso, use alguno de los siguientes links:
 
 1. [Fork Github a Github](https://docs.github.com/en/get-started/quickstart/fork-a-repo){:target="_blank"}
 2. [Fork de Github a Gitlab](https://stackoverflow.com/questions/50973048/forking-git-repository-from-github-to-gitlab){:target="_blank"}
 3. [Fork de Github a Bitbucket](https://stackoverflow.com/questions/8137997/forking-from-github-to-bitbucket){:target="_blank"}
 
-Si esta usando Gitpod puede ejecutar su código de forma inmediata. De lo contrario, instale las dependencias en su máquina o ambiente de desarollo, usando el archivo de `requirements.txt`. La versión de Python que se usa es 3.10 pero el requerimiento mínimo es de 3.7. Para crear ambiente de desarollo virtuales en su máquina local, es sugerible usar [Conda](https://docs.conda.io/en/latest/){:target="_blank"}, en los recursos adicionales del sitio puede encontrar un [documento](/docs/recursos_adicionales/conda){:target="_blank"} sobre su configuración.
+Si está usando Github Codespaces puede ejecutar su código de forma inmediata. De lo contrario, instale las dependencias en su máquina o ambiente de desarollo, usando el archivo de `requirements.txt`. La versión de Python que se usa es 3.12. Para crear ambientes de desarollo virtuales en su máquina local, es sugerible usar [Conda](https://docs.conda.io/en/latest/){:target="_blank"}, en los recursos adicionales del sitio puede encontrar un [documento](/docs/recursos_adicionales/conda){:target="_blank"} sobre su configuración.
 
 {: .note }
-> Gitpod puede tardar un poco en instalar las dependencias la primera vez que crea el workspace. Usted puede observar el progreso de la instalación por medio de la vista de terminal en la parte inferior del IDE. Así mismo, en la esquina inferior derecha puede ver los pasos en ejecución con su correspondiente output.
+> Github Codespaces puede tardar un poco en instalar las dependencias la primera vez que crea el workspace. Usted puede observar el progreso de la instalación por medio de la vista de terminal en la parte inferior del IDE. Así mismo, en la esquina inferior derecha puede ver los pasos en ejecución con su correspondiente output.
 
 ## Manos a la obra
 
