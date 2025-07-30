@@ -1,5 +1,5 @@
 {
   "name": "misw4406.github.io",
-  "image": "mcr.microsoft.com/devcontainers/ruby:3.2",
+  "image": "mcr.microsoft.com/devcontainers/ruby:3.0",
   "postCreateCommand": "bundle install"
 }
